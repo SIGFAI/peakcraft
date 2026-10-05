@@ -3,6 +3,13 @@
   "version": "1.0.0",
   "name": "PeakCraft",
   "tagline": "Minecraft inside PEAK: move, build, break, dig into the mountain and fight by Minecraft's rules, and switch back to PEAK's own climbing at any time (BepInEx plugin + SkyCraft's Fabric mod).",
+  "how_to_play": [
+    "Climb PEAK's mountain by Minecraft's rules: build, break, dig into the mountain and hit creatures.",
+    "Press Play: Minecraft starts first, then PEAK; start a run and wait for Minecraft's hotbar.",
+    "WASD/Space/Shift move, left/right mouse break/place, 1-5 and wheel the Minecraft hotbar, E inventory, T chat.",
+    "6-8 pick the scout's own items (mouse uses them), F picks up or interacts, Q lets go of a scout item.",
+    "Press 9 or F10 for PEAK mode to climb by the game's rules, and again to go back."
+  ],
   "kind": "passthrough",
   "games": [
     {
