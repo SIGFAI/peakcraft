@@ -4,11 +4,11 @@
   "name": "PeakCraft",
   "tagline": "Minecraft inside PEAK: move, build, break, dig into the mountain and fight by Minecraft's rules, and switch back to PEAK's own climbing at any time (BepInEx plugin + SkyCraft's Fabric mod).",
   "how_to_play": [
-    "Climb PEAK's mountain by Minecraft's rules: build, break, dig into the mountain and hit creatures.",
-    "Press Play: Minecraft starts first, then PEAK; start a run and wait for Minecraft's hotbar.",
-    "WASD/Space/Shift move, left/right mouse break/place, 1-5 and wheel the Minecraft hotbar, E inventory, T chat.",
-    "6-8 pick the scout's own items (mouse uses them), F picks up or interacts, Q lets go of a scout item.",
-    "Press 9 or F10 for PEAK mode to climb by the game's rules, and again to go back."
+    "Minecraft takes over your PEAK scout: build, break, dig into the mountain and hit creatures, and switch back to PEAK's own climbing at any time.",
+    "Press Play: Minecraft starts first, then PEAK. Start a run: when Minecraft's hotbar shows at the bottom of the screen it has the scout.",
+    "WASD/Space/Shift move, left/right mouse break/place, 1-5 and wheel Minecraft hotbar, E inventory, T chat, Esc pause.",
+    "6-8 the scout's own items (mouse uses them), F pick up/interact, Q drop scout item.",
+    "9 or F10 switches to PEAK mode (climb by the game's rules); press again to go back."
   ],
   "kind": "passthrough",
   "games": [
@@ -261,9 +261,7 @@
   "status": "beta",
   "issues": "https://github.com/Keel62155/Minecraft-X-Games/issues",
   "notes": [
-    "How it works: Minecraft runs hidden next to PEAK and takes over your scout: Minecraft movement, blocks, hand and hotbar on PEAK's mountain. You build, break, dig into the mountain and hit creatures, and can switch back to PEAK's own climbing at any time.",
-    "Press Play: Minecraft starts first, then PEAK. Start a run: when Minecraft's hotbar shows at the bottom of the screen it has the scout. Every level gives a fresh Minecraft world, so blocks are not carried over. You do not need SkyCraft or Skyrim.",
-    "Keys: WASD/Space/Shift move, left/right mouse break/place, 1-5 and wheel Minecraft hotbar, 6-8 the scout's own items (mouse uses them), 9 or F10 PEAK mode (climb by the game's rules, press again to go back), F pick up/interact, Q drop scout item, E inventory, T chat, Esc pause.",
+    "Minecraft runs hidden next to PEAK. Every level gives a fresh Minecraft world, so blocks are not carried over. You do not need SkyCraft or Skyrim.",
     "PEAK on Steam and Minecraft: Java Edition, Windows only. Made for the PEAK build of 2026-10-04: after a game update parts of the mod may stop working. If you use r2modman or Thunderstore, start PEAK from the app, not from your profile.",
     "Play solo, or only with friends who agree: while Minecraft drives, your scout ignores hunger, cold and fall injuries and Minecraft hits can knock other scouts over; friends see your scout slide about rigidly. Run one \"Minecraft X\" mod at a time. Restore removes BepInEx and PeakCraft.",
     "Prototype. Known gaps: PEAK's sound can go quiet, digging into the mountain is little tested. Report bugs to the author on the upstream issue tracker with BepInEx\\LogOutput.log."
