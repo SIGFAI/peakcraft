@@ -1,0 +1,264 @@
+{
+  "id": "sigf/peakcraft",
+  "version": "1.0.0",
+  "name": "PeakCraft",
+  "tagline": "Minecraft inside PEAK: move, build, break, dig into the mountain and fight by Minecraft's rules, and switch back to PEAK's own climbing at any time (BepInEx plugin + SkyCraft's Fabric mod).",
+  "kind": "passthrough",
+  "games": [
+    {
+      "game": "peak",
+      "role": "host",
+      "label": "PEAK",
+      "engine": "PEAK (Unity, Mono, x64) + BepInEx 5 plugin (C#)",
+      "apps": {
+        "steam": "3527290"
+      },
+      "runtime": "PEAK build of 2026-10-04 (upstream pins none)"
+    },
+    {
+      "game": "minecraft",
+      "role": "guest",
+      "label": "Minecraft",
+      "mc": "26.3",
+      "loader": "fabric@0.19.5",
+      "java": "25"
+    }
+  ],
+  "requires": [
+    {
+      "id": "bepinex",
+      "version": "5.4.23.5",
+      "license": "LGPL-2.1, shipped unchanged",
+      "page": "https://github.com/BepInEx/BepInEx/releases/tag/v5.4.23.5",
+      "note": "installed into the PEAK folder by the app",
+      "source": {
+        "url": "https://github.com/SIGFAI/peakcraft/releases/download/v1.0.0/BepInEx_win_x64_5.4.23.5.zip",
+        "sha256": "82f9878551030f54657792c0740d9d51a09500eeae1fba21106b0c441e6732c4"
+      }
+    },
+    {
+      "id": "fabric-loader",
+      "version": "0.19.5"
+    },
+    {
+      "id": "fabric-api",
+      "version": "0.161.0+26.3",
+      "note": "in the Minecraft pack (downloaded from Modrinth)"
+    }
+  ],
+  "install": [
+    {
+      "game": "peak",
+      "strategy": "game-dir-snapshot",
+      "loader": "bepinex",
+      "files": [
+        {
+          "src": "BepInEx_win_x64_5.4.23.5.zip",
+          "dst": "{game}",
+          "unpack": true,
+          "contents": [
+            {
+              "path": ".doorstop_version",
+              "sha256": "75a2f501000d4fe28f74bc7ee66dae5581959d28b6c44f0c1b0c05cd5ba261e6"
+            },
+            {
+              "path": "changelog.txt",
+              "sha256": "b184d858cb0ff6614ca8ce0247fb0d186cabc91ed7e4d4d9d57ea3d744ce98b5"
+            },
+            {
+              "path": "doorstop_config.ini",
+              "sha256": "4d5c6dfa0f771c6a5b1b0c559aca0bd0ece7d08b08fff894708dc3b73ce73cfc"
+            },
+            {
+              "path": "winhttp.dll",
+              "sha256": "8c6cdbc38836dee87e3368f5de1994d7c0ccebf29e4ce7aba3c0981f9375412c"
+            },
+            {
+              "path": "BepInEx/core/0Harmony.dll",
+              "sha256": "1a21cc03424fc82c3dd1346905d16494536b9595ae4162228d99fb7c285c1031"
+            },
+            {
+              "path": "BepInEx/core/0Harmony.xml",
+              "sha256": "d1f02fc3ada3a13da307de421225bfe56ebe24064370980979391c4be021672f"
+            },
+            {
+              "path": "BepInEx/core/0Harmony20.dll",
+              "sha256": "c755a5ab2712915a32f9a850d580a8c1b70ff1653bc76600f2767aa8ffccc663"
+            },
+            {
+              "path": "BepInEx/core/BepInEx.dll",
+              "sha256": "8255b28902886085c578b9e427d3073c97002db85176d2090cdeda90ef14ce70"
+            },
+            {
+              "path": "BepInEx/core/BepInEx.Harmony.dll",
+              "sha256": "00c8f2ac48593e4d45ce4eb26ce4e68b18113c5c489b38b8bf0850f65830d601"
+            },
+            {
+              "path": "BepInEx/core/BepInEx.Harmony.xml",
+              "sha256": "a04fedf08f7c81f5d01aba6f2840a7ffce50b79bbd24587d8dbe69ab73971d29"
+            },
+            {
+              "path": "BepInEx/core/BepInEx.Preloader.dll",
+              "sha256": "55d3895351a9d16b63b6f35f1c01b44ac650979e853d0bd3a442b92a082af64f"
+            },
+            {
+              "path": "BepInEx/core/BepInEx.Preloader.xml",
+              "sha256": "33275b2783b7b99495a02c098ee86d6a9a2783e884a5c9369021f20c94cf99e7"
+            },
+            {
+              "path": "BepInEx/core/BepInEx.xml",
+              "sha256": "7ba2266061b9f8a9f146218a312bfdd0d7f2b53a99a7e66c957215c6b66ca0d7"
+            },
+            {
+              "path": "BepInEx/core/HarmonyXInterop.dll",
+              "sha256": "7ce1342d3afa0334b59a3e38c0aed15e162b9abe9d46f95f34be44af47f3b493"
+            },
+            {
+              "path": "BepInEx/core/Mono.Cecil.dll",
+              "sha256": "7ae470288fff4a402899c254d0a76cefef55877f5c54f96e83c797cc5bb6e2f6"
+            },
+            {
+              "path": "BepInEx/core/Mono.Cecil.Mdb.dll",
+              "sha256": "5896d1898f616701fff18f3b2c71e6b844d2390ef9f41e1c5fccce8cb27c698e"
+            },
+            {
+              "path": "BepInEx/core/Mono.Cecil.Pdb.dll",
+              "sha256": "174db44a067f58561510af746f3caeb032037762c57a31c8d9ee32db25174984"
+            },
+            {
+              "path": "BepInEx/core/Mono.Cecil.Rocks.dll",
+              "sha256": "54ac539fb5ddc8b44c0e9acd0fcb7324f89d1a072edf8ebc1b06dd691e3d3927"
+            },
+            {
+              "path": "BepInEx/core/MonoMod.RuntimeDetour.dll",
+              "sha256": "40e49bb314391cd7bddc2644f8553eeba92c194b940836b103df16955c464e0c"
+            },
+            {
+              "path": "BepInEx/core/MonoMod.RuntimeDetour.xml",
+              "sha256": "54887808960d156550b37d602d08847607aa9e908d039f2765fb0b5e79394aa4"
+            },
+            {
+              "path": "BepInEx/core/MonoMod.Utils.dll",
+              "sha256": "9d1495f147ac93c4f81f84538c1a326e8f8a6aefc78d6289d798f3ce1162c5e9"
+            },
+            {
+              "path": "BepInEx/core/MonoMod.Utils.xml",
+              "sha256": "0577b362023a3432d6e8d7934c5eddc3e08fdbb19e191af083e341562c5ede38"
+            }
+          ],
+          "url": "https://github.com/SIGFAI/peakcraft/releases/download/v1.0.0/BepInEx_win_x64_5.4.23.5.zip",
+          "sha256": "82f9878551030f54657792c0740d9d51a09500eeae1fba21106b0c441e6732c4",
+          "size": 639118
+        },
+        {
+          "src": "PeakCraft.zip",
+          "dst": "{game}/BepInEx/plugins",
+          "unpack": true,
+          "contents": [
+            {
+              "path": "PeakCraft/README.txt",
+              "sha256": "18ad735b2e001873cbf9e51bb5e12cedb8f2d2dd267f112a36f98c98326f368b"
+            },
+            {
+              "path": "PeakCraft/PeakCraft.dll",
+              "sha256": "53bd95fc7fd191f3cefad6e88fdb432085266b31ee35c1954eff7eaca19198e0"
+            },
+            {
+              "path": "PeakCraft/PeakCraft-source.zip",
+              "sha256": "478c18537c5660ed25bcfaf971a7c2336435d46ede4d8659397001b2ef897cf6"
+            }
+          ],
+          "url": "https://github.com/Keel62155/Minecraft-X-Games/releases/download/1.0.0-PEAK/PeakCraft.zip",
+          "sha256": "ae3d79de78390c05e8964e018d5fa19170595ad8d144b918c9b65d81ef4747a9",
+          "size": 96570
+        }
+      ]
+    },
+    {
+      "game": "minecraft",
+      "strategy": "mrpack",
+      "pack": {
+        "src": "peakcraft.mrpack",
+        "url": "https://github.com/SIGFAI/peakcraft/releases/download/v1.0.0/peakcraft.mrpack",
+        "sha256": "5db03f668a378a84f1d1e55f025472480467fc832acbafab56632fa5f21dd837",
+        "size": 235725
+      }
+    }
+  ],
+  "launch": [
+    {
+      "game": "minecraft"
+    },
+    {
+      "game": "peak",
+      "args": []
+    }
+  ],
+  "files": [
+    {
+      "name": "BepInEx_win_x64_5.4.23.5.zip",
+      "url": "https://github.com/SIGFAI/peakcraft/releases/download/v1.0.0/BepInEx_win_x64_5.4.23.5.zip",
+      "sha256": "82f9878551030f54657792c0740d9d51a09500eeae1fba21106b0c441e6732c4",
+      "size": 639118
+    },
+    {
+      "name": "PeakCraft.zip",
+      "url": "https://github.com/Keel62155/Minecraft-X-Games/releases/download/1.0.0-PEAK/PeakCraft.zip",
+      "sha256": "ae3d79de78390c05e8964e018d5fa19170595ad8d144b918c9b65d81ef4747a9",
+      "size": 96570
+    },
+    {
+      "name": "peakcraft.mrpack",
+      "url": "https://github.com/SIGFAI/peakcraft/releases/download/v1.0.0/peakcraft.mrpack",
+      "sha256": "5db03f668a378a84f1d1e55f025472480467fc832acbafab56632fa5f21dd837",
+      "size": 235725
+    }
+  ],
+  "source": {
+    "repo": "https://github.com/Keel62155/Minecraft-X-Games",
+    "license": "No license (upstream download) + MIT",
+    "upstream_license": null,
+    "fetch": "upstream",
+    "tag": "1.0.0-PEAK",
+    "commit": "d6fc4b6b9e5536f6c29c2b217662d9b2a878d898",
+    "hosted": "https://github.com/SIGFAI/peakcraft",
+    "based_on": "https://github.com/chasmlol/SkyCraft",
+    "bundled": [
+      {
+        "name": "BepInEx",
+        "version": "5.4.23.5",
+        "repo": "https://github.com/BepInEx/BepInEx",
+        "commit": "57f1fb859bd4d0264cd2a59074d0e96c6a492a33",
+        "license": "LGPL-2.1"
+      },
+      {
+        "name": "SkyCraft (Fabric mod)",
+        "version": "0.1.2",
+        "repo": "https://github.com/chasmlol/SkyCraft",
+        "commit": "bfcaf178524b92c2cdeb88e4ce0f13ef9ded6f32",
+        "license": "MIT"
+      }
+    ]
+  },
+  "media": {},
+  "built_by": {
+    "author": "Keel62155",
+    "authors": [
+      "Keel62155",
+      "chasmlol"
+    ],
+    "packaged_by": "SIGF"
+  },
+  "idea_by": "Keel62155",
+  "built_at": "2026-10-05T00:00:00.000Z",
+  "status": "beta",
+  "issues": "https://github.com/Keel62155/Minecraft-X-Games/issues",
+  "notes": [
+    "PEAK on Steam and Minecraft: Java Edition. Windows only. Made for the PEAK build of 2026-10-04: after a game update, parts of the mod may stop working until a new release.",
+    "Play solo, or only with friends who agree: in a lobby your modded scout ignores hunger, cold and fall injuries while Minecraft drives, and Minecraft hits can knock other scouts over. Friends see your scout slide about rigidly.",
+    "Press Play: Minecraft starts first as the app's own Prism instance \"sigf-peakcraft\" (SkyCraft's Fabric mod, Minecraft 26.3, Java 25), then PEAK. You do not need SkyCraft or Skyrim. Every level gives a fresh Minecraft world.",
+    "BepInEx 5.4.23.5 and PeakCraft are installed into the PEAK folder, PeakCraft downloaded from the author's own release; Restore removes both. If you already use a mod manager profile (r2modman, Thunderstore), start PEAK from the app, not from the profile.",
+    "Keys: 9 or F10 toggles PEAK mode (climb by the game's rules), 6-8 use the scout's own items. Run one \"Minecraft X\" mod at a time: they share the same link. Log: BepInEx\\LogOutput.log.",
+    "Prototype. Known gaps: PEAK's sound can go quiet, digging into the mountain is little tested. Report bugs to the author on the upstream issue tracker."
+  ]
+}
