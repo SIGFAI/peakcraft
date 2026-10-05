@@ -254,11 +254,11 @@
   "status": "beta",
   "issues": "https://github.com/Keel62155/Minecraft-X-Games/issues",
   "notes": [
-    "PEAK on Steam and Minecraft: Java Edition. Windows only. Made for the PEAK build of 2026-10-04: after a game update, parts of the mod may stop working until a new release.",
-    "Play solo, or only with friends who agree: in a lobby your modded scout ignores hunger, cold and fall injuries while Minecraft drives, and Minecraft hits can knock other scouts over. Friends see your scout slide about rigidly.",
-    "Press Play: Minecraft starts first as the app's own Prism instance \"sigf-peakcraft\" (SkyCraft's Fabric mod, Minecraft 26.3, Java 25), then PEAK. You do not need SkyCraft or Skyrim. Every level gives a fresh Minecraft world.",
-    "BepInEx 5.4.23.5 and PeakCraft are installed into the PEAK folder, PeakCraft downloaded from the author's own release; Restore removes both. If you already use a mod manager profile (r2modman, Thunderstore), start PEAK from the app, not from the profile.",
-    "Keys: 9 or F10 toggles PEAK mode (climb by the game's rules), 6-8 use the scout's own items. Run one \"Minecraft X\" mod at a time: they share the same link. Log: BepInEx\\LogOutput.log.",
-    "Prototype. Known gaps: PEAK's sound can go quiet, digging into the mountain is little tested. Report bugs to the author on the upstream issue tracker."
+    "How it works: Minecraft runs hidden next to PEAK and takes over your scout: Minecraft movement, blocks, hand and hotbar on PEAK's mountain. You build, break, dig into the mountain and hit creatures, and can switch back to PEAK's own climbing at any time.",
+    "Press Play: Minecraft starts first, then PEAK. Start a run: when Minecraft's hotbar shows at the bottom of the screen it has the scout. Every level gives a fresh Minecraft world, so blocks are not carried over. You do not need SkyCraft or Skyrim.",
+    "Keys: WASD/Space/Shift move, left/right mouse break/place, 1-5 and wheel Minecraft hotbar, 6-8 the scout's own items (mouse uses them), 9 or F10 PEAK mode (climb by the game's rules, press again to go back), F pick up/interact, Q drop scout item, E inventory, T chat, Esc pause.",
+    "PEAK on Steam and Minecraft: Java Edition, Windows only. Made for the PEAK build of 2026-10-04: after a game update parts of the mod may stop working. If you use r2modman or Thunderstore, start PEAK from the app, not from your profile.",
+    "Play solo, or only with friends who agree: while Minecraft drives, your scout ignores hunger, cold and fall injuries and Minecraft hits can knock other scouts over; friends see your scout slide about rigidly. Run one \"Minecraft X\" mod at a time. Restore removes BepInEx and PeakCraft.",
+    "Prototype. Known gaps: PEAK's sound can go quiet, digging into the mountain is little tested. Report bugs to the author on the upstream issue tracker with BepInEx\\LogOutput.log."
   ]
 }
