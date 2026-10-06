@@ -264,6 +264,7 @@
     "Minecraft runs hidden next to PEAK. Every level gives a fresh Minecraft world, so blocks are not carried over. You do not need SkyCraft or Skyrim.",
     "PEAK on Steam and Minecraft: Java Edition, Windows only. Made for the PEAK build of 2026-10-04: after a game update parts of the mod may stop working. If you use r2modman or Thunderstore, start PEAK from the app, not from your profile.",
     "Play solo, or only with friends who agree: while Minecraft drives, your scout ignores hunger, cold and fall injuries and Minecraft hits can knock other scouts over; friends see your scout slide about rigidly. Run one \"Minecraft X\" mod at a time. Restore removes BepInEx and PeakCraft.",
-    "Prototype. Known gaps: PEAK's sound can go quiet, digging into the mountain is little tested. Report bugs to the author on the upstream issue tracker with BepInEx\\LogOutput.log."
+    "Prototype. Known gaps: PEAK's sound can go quiet, digging into the mountain is little tested. Report bugs to the author on the upstream issue tracker with BepInEx\\LogOutput.log.",
+    "No free SIGF server for this mashup: the SkyCraft Minecraft mod in its pack crashes on a hosted (Linux) server. Play it in your own Minecraft world."
   ]
 }
